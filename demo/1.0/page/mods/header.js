@@ -1,6 +1,6 @@
 /**
  * @fileoverview 页面头部公用脚本
- * @author: cc
+ * @author: cc 2013-10-28
  *
  **/
 KISSY.add(function(S) {
@@ -10,7 +10,7 @@ KISSY.add(function(S) {
   	 */
 	var S = KISSY,
   	Shoutable = { 
-  		shout: function() { alert("Iam a " + this.name + ".") }
+  		shout: function() { S.log("Iam a " + this.name + ".") }
   	};
 
   	function Dog(name) { this.name = "Dog " + name; };
@@ -23,7 +23,7 @@ KISSY.add(function(S) {
   	new Cat('Tom').shout();
 
     return function(){
-        alert('header of refund.');
+        S.log('header of refund.');
     }
  
 });
