@@ -7,8 +7,9 @@
     <script src="common/package-config.js"></script>
     <script type="text/javascript">
     KISSY.config({
-        debug: true, //启用debug模式
+        debug: false, //启用debug模式
   });
+
     FB.config({
             path: '.',   // 基路径（模块路径寻址的基点）
             name: 'demo',   // 页面名（会拼入模块js路径中）
@@ -20,10 +21,12 @@
 <body>
     <script type="text/javascript">
     KISSY.log(KISSY.escapeHTML("<a>x</a>"));
-    KISSY.use('page/init',function(S,Apply){
+    KISSY.use('page/init,' + 'page/style.css',function(S,Apply){
         var msg = Apply();
-        S.log(msg);
+        S.log(msg);         
     })
     </script>
+
+   <h2>Hello Kissy ! </h2>
 </body>
 </html>
